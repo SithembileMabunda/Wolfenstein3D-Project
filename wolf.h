@@ -6,7 +6,7 @@
 /*   By: smabunda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/18 17:50:52 by smabunda          #+#    #+#             */
-/*   Updated: 2019/02/26 11:34:27 by smabunda         ###   ########.fr       */
+/*   Updated: 2019/02/26 14:17:20 by smabunda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,13 @@ typedef	struct	s_wolf
 	int			size;
 	int			endian;
 	int			bpp;
+	int			adx;
+	int			ady;
+	int			asteps;
+	int			axx;
+	int			ayy;
+	float		ax;
+	float		ay;
 }				t_wolf;
 
 int				ft_buttons(int keycode, t_wolf *param);
@@ -120,9 +127,12 @@ void			ft_size(t_wolf *wolf);
 void			mtp(t_wolf *wolf, char **split, char *line);
 void			fdp(void **array);
 
-void			ft_draw_line(t_wolf *wolf, int color);
 void			drawimg(t_wolf *wolf, int x);
-void			put(int x, int y, int size, int bpp, void *img_ptr, int color);
+//void			drawimgv2(int x1, int dy, int steps, float xx, t_wolf *wolf);
+//void			put(int x, int y, int size, int bpp, void *img_ptr, int color);
+void			put(int x, int y, void *img_ptr, int size, int bpp, t_wolf *wolf);
+//void			put(int x, int y, void *img_ptr, t_wolf *wolf);
+//void			put(int x, int y, t_wolf *wolf);
 
 void			ft_error1(t_wolf *wolf);
 void			ft_error2(t_wolf *wolf);
