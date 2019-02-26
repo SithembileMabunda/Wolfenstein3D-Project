@@ -6,7 +6,7 @@
 /*   By: smabunda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/20 14:13:16 by smabunda          #+#    #+#             */
-/*   Updated: 2019/02/26 11:17:00 by smabunda         ###   ########.fr       */
+/*   Updated: 2019/02/26 11:26:20 by smabunda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,10 +109,10 @@ void	forth(t_wolf *wolf)
 {
 	if (wolf->side == 0)
 		wolf->pwd = (wolf->mapx - wolf->posx + (1 - wolf->stepx) / 2) \
-		   	/ wolf->rdx;
+					/ wolf->rdx;
 	else
 		wolf->pwd = (wolf->mapy - wolf->posy + (1 - wolf->stepy) / 2) \
-			/ wolf->rdy;
+					/ wolf->rdy;
 	if (wolf->pwd > 0.0)
 		wolf->lh = (int)(wolf->h / wolf->pwd);
 	wolf->ds = -wolf->lh / 2 + wolf->h / 2;

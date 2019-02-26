@@ -6,16 +6,14 @@
 /*   By: smabunda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/20 14:10:53 by smabunda          #+#    #+#             */
-/*   Updated: 2018/10/19 16:23:28 by smabunda         ###   ########.fr       */
+/*   Updated: 2019/02/26 11:22:46 by smabunda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf.h"
 
-void	ft_wolf(char *a, char *b, char *c)
+void	ft_init(t_wolf *wolf, char *a, char *b, char *c)
 {
-	t_wolf	*wolf;
-	
 	wolf = (t_wolf *)malloc(sizeof(t_wolf));
 	wolf->fd = open(a, O_RDONLY);
 	ft_error1(wolf);
@@ -40,4 +38,12 @@ void	ft_wolf(char *a, char *b, char *c)
 	fdp((void**)wolf->map);
 	free(&wolf);
 	close(wolf->fd);
+}
+
+void	ft_wolf(char *a, char *b, char *c)
+{
+	t_wolf	*wolf;
+
+	wolf = NULL;
+	ft_init(wolf, a, b, c);
 }
