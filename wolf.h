@@ -6,7 +6,7 @@
 /*   By: smabunda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/18 17:50:52 by smabunda          #+#    #+#             */
-/*   Updated: 2019/02/26 11:21:10 by smabunda         ###   ########.fr       */
+/*   Updated: 2019/02/26 11:34:27 by smabunda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,7 @@ void			first(t_wolf *wolf, int x);
 void			second(t_wolf *wolf);
 void			third(t_wolf *wolf);
 void			forth(t_wolf *wolf);
+void			fifth(t_wolf *wolf);
 void			ft_rc(t_wolf *wolf);
 
 int				**map_to_array(t_wolf *wolf);

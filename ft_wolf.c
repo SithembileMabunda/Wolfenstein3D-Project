@@ -6,11 +6,34 @@
 /*   By: smabunda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/20 14:10:53 by smabunda          #+#    #+#             */
-/*   Updated: 2019/02/26 11:22:46 by smabunda         ###   ########.fr       */
+/*   Updated: 2019/02/26 11:33:08 by smabunda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf.h"
+
+void	ft_rc(t_wolf *wolf)
+{
+	int		x;
+
+	x = 0;
+	wolf->img_ptr = mlx_new_image(wolf->mlx_ptr, WINW, WINW);
+	wolf->img = mlx_get_data_addr(wolf->img_ptr, &wolf->bpp, \
+			&wolf->size, &wolf->endian);
+	wolf->bpp /= 8;
+	while (x < wolf->w)
+	{
+		first(wolf, x);
+		second(wolf);
+		third(wolf);
+		forth(wolf);
+		fifth(wolf);
+		drawimg(wolf, x);
+		x++;
+	}
+	mlx_put_image_to_window(wolf->mlx_ptr, wolf->win_ptr, wolf->img_ptr, 0, 0);
+	mlx_destroy_image(wolf->mlx_ptr, wolf->img_ptr);
+}
 
 void	ft_init(t_wolf *wolf, char *a, char *b, char *c)
 {

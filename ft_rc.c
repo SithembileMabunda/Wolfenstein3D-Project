@@ -6,46 +6,28 @@
 /*   By: smabunda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/20 14:13:16 by smabunda          #+#    #+#             */
-/*   Updated: 2019/02/26 11:26:20 by smabunda         ###   ########.fr       */
+/*   Updated: 2019/02/26 11:35:03 by smabunda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf.h"
 
-void	ft_rc(t_wolf *wolf)
+void	fifth(t_wolf *wolf)
 {
-	int		x;
-
-	x = 0;
-	wolf->img_ptr = mlx_new_image(wolf->mlx_ptr, WINW, WINW);
-	wolf->img = mlx_get_data_addr(wolf->img_ptr, &wolf->bpp, \
-			&wolf->size, &wolf->endian);
-	wolf->bpp /= 8;
-	while (x < wolf->w)
+	if (wolf->side == 0)
 	{
-		first(wolf, x);
-		second(wolf);
-		third(wolf);
-		forth(wolf);
-		if (wolf->side == 0)
-		{
-			if (wolf->rdx > 0)
-				wolf->color = RED;
-			else
-				wolf->color = GREEN;
-		}
+		if (wolf->rdx > 0)
+			wolf->color = RED;
 		else
-		{
-			if (wolf->rdy > 0)
-				wolf->color = YELLOW;
-			else
-				wolf->color = BLUE;
-		}
-		drawimg(wolf, x);
-		x++;
+			wolf->color = GREEN;
 	}
-	mlx_put_image_to_window(wolf->mlx_ptr, wolf->win_ptr, wolf->img_ptr, 0, 0);
-	mlx_destroy_image(wolf->mlx_ptr, wolf->img_ptr);
+	else
+	{
+		if (wolf->rdy > 0)
+			wolf->color = YELLOW;
+		else
+			wolf->color = BLUE;
+	}
 }
 
 void	first(t_wolf *wolf, int x)
