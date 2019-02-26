@@ -6,7 +6,7 @@
 /*   By: smabunda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/20 14:13:16 by smabunda          #+#    #+#             */
-/*   Updated: 2018/10/19 16:15:33 by smabunda         ###   ########.fr       */
+/*   Updated: 2019/02/26 11:04:16 by smabunda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	ft_rc(t_wolf *wolf)
 
 	x = 0;
 	wolf->img_ptr = mlx_new_image(wolf->mlx_ptr, WINW, WINW);
-	wolf->img = mlx_get_data_addr(wolf->img_ptr, &wolf->bpp, &wolf->size, &wolf->endian);
+	wolf->img = mlx_get_data_addr(wolf->img_ptr, &wolf->bpp, /
+			&wolf->size, &wolf->endian);
 	wolf->bpp /= 8;
 	while (x < wolf->w)
 	{
@@ -85,7 +86,6 @@ void	second(t_wolf *wolf)
 void	third(t_wolf *wolf)
 {
 	wolf->hit = 0;
-
 	while (wolf->hit == 0)
 	{
 		if (wolf->sdx < wolf->sdy)
@@ -108,9 +108,11 @@ void	third(t_wolf *wolf)
 void	forth(t_wolf *wolf)
 {
 	if (wolf->side == 0)
-		wolf->pwd = (wolf->mapx - wolf->posx + (1 - wolf->stepx) / 2) / wolf->rdx;
+		wolf->pwd = (wolf->mapx - wolf->posx + (1 - wolf->stepx) / 2) \
+		   	/ wolf->rdx;
 	else
-		wolf->pwd = (wolf->mapy - wolf->posy + (1 - wolf->stepy) / 2) / wolf->rdy;
+		wolf->pwd = (wolf->mapy - wolf->posy + (1 - wolf->stepy) / 2) \
+			/ wolf->rdy;
 	if (wolf->pwd > 0.0)
 		wolf->lh = (int)(wolf->h / wolf->pwd);
 	wolf->ds = -wolf->lh / 2 + wolf->h / 2;
