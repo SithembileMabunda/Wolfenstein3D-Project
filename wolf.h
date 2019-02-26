@@ -6,7 +6,7 @@
 /*   By: smabunda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/18 17:50:52 by smabunda          #+#    #+#             */
-/*   Updated: 2018/10/19 16:38:07 by smabunda         ###   ########.fr       */
+/*   Updated: 2019/02/26 11:21:10 by smabunda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ void			ft_errorcol(t_wolf *wolf);
 void			ft_errorrow(t_wolf *wolf);
 
 void			ft_wolf(char *a, char *b, char *c);
+void			ft_init(t_wolf *wolf, char *a, char *b, char *c);
 
 int				main(int ac, char **av);
 

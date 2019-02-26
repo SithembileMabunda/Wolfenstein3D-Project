@@ -6,7 +6,7 @@
 /*   By: smabunda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/20 14:13:16 by smabunda          #+#    #+#             */
-/*   Updated: 2019/02/26 11:04:16 by smabunda         ###   ########.fr       */
+/*   Updated: 2019/02/26 11:17:00 by smabunda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_rc(t_wolf *wolf)
 
 	x = 0;
 	wolf->img_ptr = mlx_new_image(wolf->mlx_ptr, WINW, WINW);
-	wolf->img = mlx_get_data_addr(wolf->img_ptr, &wolf->bpp, /
+	wolf->img = mlx_get_data_addr(wolf->img_ptr, &wolf->bpp, \
 			&wolf->size, &wolf->endian);
 	wolf->bpp /= 8;
 	while (x < wolf->w)
