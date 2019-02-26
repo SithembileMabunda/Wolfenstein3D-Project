@@ -6,7 +6,7 @@
 /*   By: smabunda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/18 17:50:52 by smabunda          #+#    #+#             */
-/*   Updated: 2019/02/26 14:17:20 by smabunda         ###   ########.fr       */
+/*   Updated: 2019/02/26 14:20:12 by smabunda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,8 @@ void			fdp(void **array);
 void			drawimg(t_wolf *wolf, int x);
 //void			drawimgv2(int x1, int dy, int steps, float xx, t_wolf *wolf);
 //void			put(int x, int y, int size, int bpp, void *img_ptr, int color);
-void			put(int x, int y, void *img_ptr, int size, int bpp, t_wolf *wolf);
+//void			put(int x, int y, void *img_ptr, int size, int bpp, t_wolf *wolf);
+void			put(int x, int y, void *img_ptr, t_wolf *wolf);
 //void			put(int x, int y, void *img_ptr, t_wolf *wolf);
 //void			put(int x, int y, t_wolf *wolf);
 
