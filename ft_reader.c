@@ -6,7 +6,7 @@
 /*   By: smabunda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 13:42:58 by smabunda          #+#    #+#             */
-/*   Updated: 2018/10/19 16:36:54 by smabunda         ###   ########.fr       */
+/*   Updated: 2019/02/26 11:11:14 by smabunda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int		**map_to_array(t_wolf *wolf)
 {
 	int		**array;
 	char	**s;
-	
+
 	wolf->i = 0;
 	ft_size(wolf);
 	wolf->fd = open(wolf->fn, O_RDONLY);
